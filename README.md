@@ -1,4 +1,4 @@
-<img src="gengar.gif"/>
+<img src="gengar.gif" height=200px width=300px/>
 
 
 # First of all, this code was made for educational purposes
@@ -20,3 +20,4 @@ In this code, XOR was used, which is a cipher where we can perform bit-by-bit op
 <p>0 xor 0 = 0</p>
 
 Look how simple, if both bits are different from each other, that is, if the 1 bit of B is equal to the 1 bit of A, 0 will be returned, and if it is different, 1 will be returned
+I apologize for this low quality code, if you want to change anything, feel free!

@@ -1,10 +1,11 @@
+
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 DWORD bytesWritten;
 DWORD bytesRead;
-BYTE key[24] = "supereasy1;
+BYTE key[11] = "supereasy1;
 BYTE input[24];
 BYTE result[25];
 BYTE buffer[25];
